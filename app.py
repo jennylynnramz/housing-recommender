@@ -12,15 +12,12 @@ app = Flask(__name__)
 from flask_sqlalchemy import SQLAlchemy
 # app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL', '')
 #app.py change db uri to local
-# db_username = "jennylynnramz"
-# db_password = "catcatapricot"
-# dbname = "database1"
-# endpoint = "database1.cmrlzk1tjuhz.us-west-1.rds.amazonaws.com"
 
-db_username = "postgres"
-db_password = "postgres"
-dbname = "housing_rec"
-app.config['SQLALCHEMY_DATABASE_URI'] = f"postgresql://{db_username}:{db_password}@localhost:5433/{dbname}"
+
+db_username = "username"
+db_password = "password"
+dbname = "dbname"
+app.config['SQLALCHEMY_DATABASE_URI'] = f"postgresql://{db_username}:{db_password}@localhost:5432/{dbname}"
 
 # Remove tracking modifications
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
