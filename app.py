@@ -107,11 +107,15 @@ def check_database(input_array, db, post_start_time):
 
 def recreate_previous(input_array, results):
     print(input_array)
-    print(results)
+    # print(results)
     print("This might be it")
 
+    print(type(results))
+    mytable = str(results).replace("('", "").replace("',)", "").replace("\\n", "")
+    # mytable = results.replace("(", "")
+    # mytable = (results.rstrip("\n"))
 
-    mytable = results
+
 
     return render_template('display_results.html', table=mytable)
 
