@@ -1,5 +1,6 @@
 # Dependencies
 from flask import Flask, render_template, request, redirect
+from config.config import db_username, db_password, dbname, endpoint
 import pandas as pd
 import the_magic
 import time
@@ -13,11 +14,7 @@ from flask_sqlalchemy import SQLAlchemy
 # app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL', '')
 #app.py change db uri to local
 
-
-db_username = "username"
-db_password = "password"
-dbname = "dbname"
-app.config['SQLALCHEMY_DATABASE_URI'] = f"postgresql://{db_username}:{db_password}@localhost:5432/{dbname}"
+app.config['SQLALCHEMY_DATABASE_URI'] = f"postgresql://{db_username}:{db_password}@{endpoint}:5432/{dbname}"
 
 # Remove tracking modifications
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
@@ -165,4 +162,4 @@ def hot_code(input_array):
         
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', debug=True)
+    app.run(host='127.0.0.1')
