@@ -3,6 +3,10 @@
 
 ## Description
 * This project uses machine learning to suggest the house that most closely resembles the input provided by a user.
+* Users provide information about their personal preferences and the model returns the homes that best match.
+
+![Preview](https://github.com/jennylynnramz/jennylynnramz.github.io/blob/master/Photos/housing-recommender-index.png?raw=true)
+![Preview](https://github.com/jennylynnramz/jennylynnramz.github.io/blob/master/Photos/housing-recommender-results.png?raw=true)
 
 ## Built With
 
