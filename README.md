@@ -1,6 +1,5 @@
 # Personal preference Housing Recommender
 
-## Demo - [Click here](http://housing-recommender.jennylynnramz.com)
 
 ## Description
 * This project uses machine learning to suggest the house that most closely resembles the input provided by a user.
